@@ -1,35 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
 
-:root{
+:root {
     /* ### Primary */
-/* #### Text */
---Very-dark-desaturated-blue: hsl(238, 29%, 16%);
---Soft-red: hsl(14, 88%, 65%);
+    /* #### Text */
+    --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --Soft-red: hsl(14, 88%, 65%);
 
-/* Background gradient: */
---Soft-violet: hsl(273, 75%, 66%);
---Soft-blue: hsl(240, 73%, 65%);
+    /* Background gradient: */
+    --Soft-violet: hsl(273, 75%, 66%);
+    --Soft-blue: hsl(240, 73%, 65%);
 
-/* ### Neutral */
-/* #### Text */
---Very-dark-grayish-blue: hsl(237, 12%, 33%);
---Dark-grayish-blue: hsl(240, 6%, 50%);
+    /* ### Neutral */
+    /* #### Text */
+    --Very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --Dark-grayish-blue: hsl(240, 6%, 50%);
 
-/* #### Dividers */
---Light-grayish-blue: hsl(240, 5%, 91%);
+    /* #### Dividers */
+    --Light-grayish-blue: hsl(240, 5%, 91%);
 }
 
-body{
+body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(var(--Soft-violet),var(--Soft-blue));
+    background-image: linear-gradient(var(--Soft-violet), var(--Soft-blue));
     background-repeat: no-repeat;
     height: 100vh;
+    position: relative;
+    /* z-index: 1 ; */
 }
 
-.card{
+.card {
     box-sizing: border-box;
     font-family: 'Kumbh Sans', sans-serif;
     font-weight: 400;
@@ -40,14 +42,19 @@ body{
     border-radius: 30px;
 }
 
-.card-images{
+.card-images {
     margin: 0 auto;
     position: relative;
     bottom: 115px;
     width: 250px;
     height: 220px;
+    /* border: 1px solid red; */
 }
-.card-images__shadow-img{
+.card-images__desktop{
+    display: none;
+}
+
+.card-images__shadow-img-mobile {
     position: relative;
     margin: 0px;
     bottom: 80px;
@@ -55,34 +62,100 @@ body{
     /* border: 1px solid red; */
 }
 
-.card-text{
+.card-text {
     margin-top: -110px;
     font-size: 14px;
+    /* border: 1px solid red; */
 }
-.card-text h2{
+
+.card-text h2 {
     text-align: center;
     font-size: 30px;
     margin: 30px 0;
 }
 
-.card-text__description-text{
+.card-text__description-text {
+    margin: 15px 0;
+}
+.card-text__description-text[open]{
+    font-weight: 700;
+}
+.card-text__description-text--hidden-paragraph{
+    font-weight: 400;
 }
 
 .trigger {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
+}
 
-.trigger:hover{
+.trigger:hover {
     cursor: pointer;
     color: var(--Soft-red);
 }
 
-.card-text__description-text--hidden-paragraph{
-    display: none;
+hr {
+    border: 1px solid rgb(234, 234, 234);
 }
 
-hr{
-   border: 1px solid rgb(234, 234, 234);
+/* --- VIEW DESKTOP --- */
+
+@media (min-width:1440px) {
+    body{
+    }
+
+    .card {
+        /* border: 10px solid red; */
+        display: flex;
+        width: 920px;
+        height: 510px;
+    }
+
+    .card-images{
+        margin: 80px 0;
+        position: relative;
+        bottom: 0px;
+        right: 135px;
+        width: 470px;
+        height: 360px;
+        border: 1px solid red;
+    }
+    .card-images__mobile{
+        display: none;
+    }
+    .card-images__desktop{
+        border: 1px solid blue;
+        align-items: center;
+        display: inline-flex;
+        /* position: relative; */
+    }
+    .card-images__box-desktop{
+        position: relative;
+        z-index: 2;
+        bottom: 300px;
+    }
+    .card-images__img-desktop{
+        position: relative;
+        z-index: 1;
+        bottom: 320px;
+        right: 160px;
+    }
+    .card-images__shadow-img-desktop{
+        position: relative;
+        right: 1125px;
+        bottom: 370px;
+    }
+
+
+    .card-text {
+        margin: 40px 100px 70px 20px;
+    }
+    .card-text h2{
+        text-align: start;
+    }
+
+    .card-text__description-text{
+        width: 330px;
+    }
 }

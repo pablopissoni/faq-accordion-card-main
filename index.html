@@ -17,67 +17,78 @@
 <body>
   <section class="card">
     <div class="card-images">
-      <img src="./images/illustration-woman-online-mobile.svg" alt="">
-      <img class="card-images__shadow-img" src="./images/bg-pattern-mobile.svg" alt="">
+      <div class="card-images__mobile">
+        <!-- --- IMAGE MOBILE --- -->
+        <img class="card-images__img-mobile" src="./images/illustration-woman-online-mobile.svg" alt="">
+        <img class="card-images__shadow-img-mobile" src="./images/bg-pattern-mobile.svg" alt="">
+      </div>
+      <div class="card-images__desktop">
+        <!-- --- IMAGE DESKTOP --- -->
+        <img class="card-images__box-desktop" src="./images/illustration-box-desktop.svg" alt="" >
+        <img class="card-images__img-desktop" src="./images/illustration-woman-online-desktop.svg" alt="">
+        <img class="card-images__shadow-img-desktop" src="./images/bg-pattern-desktop.svg" alt="">
+        <!-- <div class="card-images__shadow-img-desktop"></div> -->
+      </div>
+    
     </div>
 
     
     <div class="card-text">
       <h2>FAQ</h2>
-      <div class="card-text__description-text">
-        <p class="trigger">How many team members can I invite?
+      <details class="card-text__description-text">
+        <summary class="trigger">How many team members can I invite?
           <img src="./images/icon-arrow-down.svg" alt="">
-        </p>
+        </summary>
         <p class="card-text__description-text--hidden-paragraph">
           You can invite up to 2 additional users on the Free plan. There is no limit on 
           team members for the Premium plan.
         </p>
-      </div>
+      </details>
 
       <hr>
       
-      <div class="card-text__description-text">
-        <p class="trigger">What is the maximum file upload size?
+      <details class="card-text__description-text">
+        <summary class="trigger">What is the maximum file upload size?
           <img src="./images/icon-arrow-down.svg" alt="">
-        </p>
+        </summary>
         <p class="card-text__description-text--hidden-paragraph">
           No more than 2GB. All files in your account must fit your allotted storage space.
         </p>
-      </div>
+      </details>
 
       <hr>
       
-      <div class="card-text__description-text">
-        <p class="trigger">How do I reset my password?
+      <details class="card-text__description-text">
+        <summary class="trigger">How do I reset my password?
           <img src="./images/icon-arrow-down.svg" alt="">
-        </p>
+        </summary>
         <p class="card-text__description-text--hidden-paragraph">
           Click “Forgot password” from the login page or “Change password” from your profile page.
           A reset link will be emailed to you.
         </p>
-      </div>
+      </details>
 
       <hr>
       
-      <div class="card-text__description-text">
-        <p class="trigger">Can I cancel my subscription?
+      <details class="card-text__description-text">
+        <summary class="trigger">Can I cancel my subscription?
           <img src="./images/icon-arrow-down.svg" alt="">
-        </p>
+        </summary>
         <p class="card-text__description-text--hidden-paragraph">
           Yes! Send us a message and we’ll process your request no questions asked.
         </p>
-      </div>
+      </details>
 
       <hr>
       
-      <div class="card-text__description-text">
-        <p class="trigger">Do you provide additional support?
+      <details class="card-text__description-text">
+        <summary class="trigger">Do you provide additional support?
           <img src="./images/icon-arrow-down.svg" alt="">
-        </p>
+        </summary>
         <p class="card-text__description-text--hidden-paragraph">
           Chat and email support is available 24/7. Phone lines are open during normal business hours.
         </p>
-      </div> 
+      </details> 
     </div>
   </section>
 
